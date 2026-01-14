@@ -6,7 +6,8 @@ const Country = () => {
   const [countries, setCountries] = useState([]);
 
   useEffect(() => {
-    fetch("https://restcountries.com/v3.1/all")
+    // fetch("https://restcountries.com/v3.1/all")
+    fetch("https://restcountries.com/v3.1/all?fields=region,area,population,name,flags")
       .then((res) => res.json())
       .then((data) => setCountries(data));
   }, []);
